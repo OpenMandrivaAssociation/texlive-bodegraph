@@ -1,3 +1,9 @@
+# revision 20047
+# category Package
+# catalog-ctan /graphics/pgf/contrib/bodegraph
+# catalog-date 2010-10-10 09:51:39 +0200
+# catalog-license lppl
+# catalog-version 1.4
 Name:		texlive-bodegraph
 Version:	1.4
 Release:	1
@@ -216,6 +222,7 @@ basic correctors are preprogrammed for use.
 %doc %{_texmfdistdir}/doc/latex/bodegraph/gnuplot/bodegraph/94.table
 %doc %{_texmfdistdir}/doc/latex/bodegraph/gnuplot/bodegraph/95.gnuplot
 %doc %{_texmfdistdir}/doc/latex/bodegraph/gnuplot/bodegraph/95.table
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -226,3 +233,5 @@ basic correctors are preprogrammed for use.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
