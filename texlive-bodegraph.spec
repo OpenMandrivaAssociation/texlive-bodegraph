@@ -17,28 +17,18 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 The package provides facilities to draw Bode, Nyquist and Black
 plots using Gnuplot and Tikz. Elementary Transfer Functions and
 basic correctors are preprogrammed for use.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -223,7 +213,6 @@ basic correctors are preprogrammed for use.
 %doc %{_texmfdistdir}/doc/latex/bodegraph/gnuplot/bodegraph/94.table
 %doc %{_texmfdistdir}/doc/latex/bodegraph/gnuplot/bodegraph/95.gnuplot
 %doc %{_texmfdistdir}/doc/latex/bodegraph/gnuplot/bodegraph/95.table
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -234,5 +223,3 @@ basic correctors are preprogrammed for use.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
