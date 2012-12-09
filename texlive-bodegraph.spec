@@ -223,3 +223,18 @@ basic correctors are preprogrammed for use.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.4-2
++ Revision: 749794
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.4-1
++ Revision: 717958
+- texlive-bodegraph
+- texlive-bodegraph
+- texlive-bodegraph
+- texlive-bodegraph
+- texlive-bodegraph
+
