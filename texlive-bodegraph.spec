@@ -6,7 +6,7 @@
 # catalog-version 1.4
 Name:		texlive-bodegraph
 Version:	1.4
-Release:	6
+Release:	7
 Summary:	Draw Bode, Nyquist and Black plots with gnuplot and TikZ
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/bodegraph
