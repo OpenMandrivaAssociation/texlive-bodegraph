@@ -5,8 +5,8 @@ Summary:	Draw Bode, Nyquist and Black plots with gnuplot and TikZ
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/bodegraph
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bodegraph.r61719.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bodegraph.doc.r61719.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bodegraph.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bodegraph.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
