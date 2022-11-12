@@ -1,18 +1,12 @@
-# revision 20047
-# category Package
-# catalog-ctan /graphics/pgf/contrib/bodegraph
-# catalog-date 2010-10-10 09:51:39 +0200
-# catalog-license lppl
-# catalog-version 1.4
 Name:		texlive-bodegraph
-Version:	1.4
-Release:	11
+Version:	61719
+Release:	1
 Summary:	Draw Bode, Nyquist and Black plots with gnuplot and TikZ
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/bodegraph
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bodegraph.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bodegraph.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bodegraph.r61719.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bodegraph.doc.r61719.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -24,12 +18,12 @@ plots using Gnuplot and Tikz. Elementary Transfer Functions and
 basic correctors are preprogrammed for use.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -216,25 +210,10 @@ basic correctors are preprogrammed for use.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.4-2
-+ Revision: 749794
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.4-1
-+ Revision: 717958
-- texlive-bodegraph
-- texlive-bodegraph
-- texlive-bodegraph
-- texlive-bodegraph
-- texlive-bodegraph
-
